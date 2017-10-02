@@ -11820,7 +11820,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Import libraries</span>
@@ -11882,7 +11882,7 @@ div#notebook {
 <span class="n">n_students</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">student_data</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
 
 <span class="c1"># TODO: Calculate number of features</span>
-<span class="n">n_features</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">student_data</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+<span class="n">n_features</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">student_data</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span>
 
 <span class="c1"># TODO: Calculate passing students</span>
 <span class="n">n_passed</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">student_data</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">student_data</span><span class="p">[</span><span class="s1">&#39;passed&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;yes&quot;</span><span class="p">])</span>
@@ -11916,7 +11916,7 @@ div#notebook {
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Total number of students: 395
-Number of features: 31
+Number of features: 30
 Number of students who passed: 265
 Number of students who failed: 130
 Graduation rate of the class: 67.00%
@@ -12209,7 +12209,7 @@ I chosse:</p>
 <ul>
 <li>Describe one real-world application in industry where the model can be applied. <em>(You may need to do a small bit of research for this — give references!)</em></li>
 </ul>
-<p>I dont find any reference to real-world application.</p>
+<p>It is use on Geophysics community, specifically to applications of Full Waveform Inversion and combine with backpropagation algorithm, it is the de facto standard algorithm for training artificial neural networks (<a href="https://en.wikipedia.org/wiki/Stochastic_gradient_descent">https://en.wikipedia.org/wiki/Stochastic_gradient_descent</a>)</p>
 <ul>
 <li>What are the strengths of the model; when does it perform well?</li>
 </ul>
@@ -12643,7 +12643,7 @@ F1 score for test set: 0.8079.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: </strong> We chose the SVM model of learning to determine whether our students need or not intervention. It is important to note that this model uses a historical basis and understands all the basic patterns, thus tracing the behavior patterns for students who will or will not need intervention. It is worth mentioning that 3 models of supervised machine learning were tested and the one that was the best hit rate in 81% of the cases was the SVM.</p>
+<p><strong>Answer: </strong> We chose the SVM model of learning to determine whether our students need or not intervention. It is important to note that this model uses a historical basis and understands all the basic patterns, thus tracing the behavior patterns for students who will or will not need intervention. It is worth mentioning that 3 models of supervised machine learning were tested and the one that was the best hit rate in 81% of the cases was the SVM. The SVM works by separating the data in more than one dimension so even if our problem is not linearly separable we can predict its result, basically after training our model we took the data entry of a new student and based on its history we predict in which of two classes it fits, thus having the necessary result.</p>
 
 </div>
 </div>
